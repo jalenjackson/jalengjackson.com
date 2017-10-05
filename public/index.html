@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/435840/three.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:900" rel="stylesheet">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/435840/CanvasRenderer.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/435840/Projector.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/435840/OrbitControls.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/150586/THREEx.WindowResize.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.min.css"/>
+    <link rel="stylesheet" href="Stylesheets/HomePage.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+
+    <h1 class="logo">Jalen Jackson | Web Developer</h1>
+    <div id="threejs"></div>
+    <div id="root"></div>
+    <h1 class="name">JALEN JACKSON</h1>
+
+    <div class="slide-container">
+      <div class="your-class">
+        <div onclick="window.location.href='https://storymi.herokuapp.com/'"  style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(storymi.png) center center no-repeat; background-size: cover;" class="slide"><h1><span>Storymi</span></h1></div>
+        <div onclick="window.location.href='https://perfprdesign.herokuapp.com/'"  style="background:url(perfpr.png) center center no-repeat; background-size: cover;" class="slide"><h1><span>Company Site<span style="font-size:12px">Professional Work</span></span></h1></div>
+        <div onclick="window.location.href='https://appifyyourbooktestdesignn.herokuapp.com/'"  style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,1)), url(appify.png) center center no-repeat; background-size: cover;" class="slide"><h1>Client Site</h1></div>
+        <div onclick="window.location.href='https://still-ravine-34360.herokuapp.com/'"  style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(chalkboard.png) center center no-repeat; background-size: cover;" class="slide"><h1><span>Chalkboard</span></h1></div>
+        <div onclick="window.location.href='https://hairobsessionz101.com/'"  style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(hair.png) center center no-repeat; background-size: cover;" class="slide"><h1><span>Hair Obsessionz</span></h1></div>
+        <div onclick="window.location.href='http://cellltronics.com/'"  style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(celltronics.png) center center no-repeat; background-size: cover;" class="slide"><h1><span>Cellltronics</span></h1></div>
+        <div onclick="window.location.href='https://pthealthcare.herokuapp.com/'"  style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(healthcare.png) center center no-repeat; background-size: cover;" class="slide"><h1><span>Healthcare Client</span></h1></div>
+        <div onclick="window.location.href='http://www.calvinproductions.com/'"  style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(price.png) center center no-repeat; background-size: cover;" class="slide"><h1><span>Calvin Productions</span></h1></div>
+        <div onclick="window.location.href='https://critic-development.herokuapp.com/'"  style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(random.png) center center no-repeat; background-size: cover;" class="slide"><h1><span>Random Design</span></h1></div>
+        <div onclick="window.location.href='https://design-site.herokuapp.com/'"  style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(design-site.png) center center no-repeat; background-size: cover;" class="slide"><h1><span style="font-size:13px;">threejs experiment</span></h1></div>
+
+
+
+        <div onclick="window.location.href='http://vrartgo.com/'"  style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(vartgo.png) center center no-repeat; background-size: cover;" class="slide"><h1><span>Vrartgo <span style="font-size:12px;">Very Old Work</span></span></h1></div>
+      </div>
+    </div>
+
+
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+  <script>
+      (function() {
+          var addMesh, animate, camera, clock, container, controls, draw, mesh, renderer, rotate, scene, start;
+
+          scene = void 0;
+
+          camera = void 0;
+
+          renderer = void 0;
+
+          container = void 0;
+
+          controls = void 0;
+
+          clock = void 0;
+
+          mesh = void 0;
+
+          rotate = true;
+
+          start = function() {
+              var ASPECT, FAR, NEAR, SCREEN_HEIGHT, SCREEN_WIDTH, VIEW_ANGLE;
+              scene = new THREE.Scene;
+              VIEW_ANGLE = 45;
+              NEAR = 0.1;
+              FAR = 10000;
+              SCREEN_WIDTH = window.innerWidth;
+              SCREEN_HEIGHT = window.innerHeight;
+              ASPECT = SCREEN_WIDTH / SCREEN_HEIGHT;
+              camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
+              camera.position.set(77.82504298529939, 54.02121980722944, -74.02178601347767);
+              camera.rotation.set(-2.4020274682629177, 0.6097939469542306, 2.6601321578044113);
+              camera.lookAt(scene.position);
+              scene.add(camera);
+              renderer = new THREE.WebGLRenderer({
+                  antialias: true,
+                  alpha: true
+              });
+              renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+              container = document.getElementById('threejs');
+              container.appendChild(renderer.domElement);
+              clock = new THREE.Clock;
+          };
+
+
+          var hemiLight, jsonLoader, light;
+
+
+          draw = function() {
+              light = new THREE.DirectionalLight(0x0000ff,2);
+              light.position.set(50, 0, -500);
+              light.castShadow = true;
+              scene.add(light);
+              jsonLoader = new THREE.ObjectLoader;
+              return jsonLoader.load('car-concept-threejs/car-concept.json', addMesh);
+          };
+
+          Cloud = function(){
+              // Create an empty container that will hold the different parts of the cloud
+              this.mesh = new THREE.Object3D();
+
+              // create a cube geometry;
+              // this shape will be duplicated to create the cloud
+              var geom = new THREE.BoxGeometry(1,2,2);
+
+              // create a material; a simple white material will do the trick
+              var mat = new THREE.MeshPhongMaterial({
+                  color:0xffffff,
+              });
+
+              // duplicate the geometry a random number of times
+              var nBlocs = 15+Math.floor(Math.random()*3);
+              for (var i=0; i<nBlocs; i++ ){
+
+                  // create the mesh by cloning the geometry
+                  var m = new THREE.Mesh(geom, mat);
+
+                  // set the position and the rotation of each cube randomly
+                  m.position.x = i*85;
+                  m.position.y = Math.random()*1000;
+                  m.position.z = Math.random()*1000;
+                  m.rotation.z = Math.random()*Math.PI*2;
+                  m.rotation.y = Math.random()*Math.PI*2;
+
+                  // set the size of the cube randomly
+                  var s = .1 + Math.random()*.9;
+                  m.scale.set(s,s,s);
+
+                  // allow each cube to cast and to receive shadows
+                  m.castShadow = true;
+                  m.receiveShadow = true;
+
+                  // add the cube to the container we first created
+                  this.mesh.add(m);
+              }
+          };
+
+          Sky = function(){
+              // Create an empty container
+              this.mesh = new THREE.Object3D();
+
+              // choose a number of clouds to be scattered in the sky
+              this.nClouds = 20;
+
+              // To distribute the clouds consistently,
+              // we need to place them according to a uniform angle
+              var stepAngle = Math.PI*2 / this.nClouds;
+
+              // create the clouds
+              for(var i=0; i<this.nClouds; i++){
+                  var c = new Cloud();
+
+                  // set the rotation and the position of each cloud;
+                  // for that we use a bit of trigonometry
+                  var a = stepAngle*i; // this is the final angle of the cloud
+                  var h = 750 + Math.random()*200; // this is the distance between the center of the axis and the cloud itself
+
+                  // Trigonometry!!! I hope you remember what you've learned in Math :)
+                  // in case you don't:
+                  // we are simply converting polar coordinates (angle, distance) into Cartesian coordinates (x, y)
+                  c.mesh.position.y = Math.sin(a)*h;
+                  c.mesh.position.x = Math.cos(a)*h;
+
+                  // rotate the cloud according to its position
+                  c.mesh.rotation.z = a + Math.PI/2;
+
+                  // for a better result, we position the clouds
+                  // at random depths inside of the scene
+                  c.mesh.position.z = -400-Math.random()*400;
+
+                  // we also set a random scale for each cloud
+                  var s = 1+Math.random()*2;
+                  c.mesh.scale.set(s,s,s);
+
+                  // do not forget to add the mesh of each cloud in the scene
+                  this.mesh.add(c.mesh);
+              }
+          }
+
+// Now we instantiate the sky and push its center a bit
+// towards the bottom of the screen
+
+          var sky;
+
+          function createSky(){
+              sky = new Sky();
+              sky.mesh.position.y = -600;
+              scene.add(sky.mesh);
+          }
+
+
+          var obj;
+
+          addMesh = function(object) {
+
+
+              obj = object;
+              var materialObj = new THREE.MeshNormalMaterial({
+                  vertexColors: THREE.FaceColors,
+                  overdraw: 0.5
+              });
+              object.traverse(function(child) {
+                  if (child instanceof THREE.Mesh) {
+                      child.geometry.computeVertexNormals;
+                  }
+              });
+
+              object.position.set(-150,-95,30);
+              object.rotateY(100);
+              object.rotateX(-6);
+              // then directly add the object
+              return scene.add(object);
+          };
+
+          animate = function() {
+              requestAnimationFrame(animate);
+              sky.mesh.rotation.z += .01;
+              obj.rotation.y += 0.0007;
+
+
+              return renderer.render(scene, camera);
+          };
+
+
+
+
+          start();
+          var delay = 2000; //milliseconds
+          var timeoutId;
+          var animationIsFinished = false;
+
+          createSky();
+          draw();
+
+          animate();
+
+      }).call(this);
+
+
+
+  </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            jQuery('.slick-slide').bind('touchstart', function(){ console.log('touchstart') });
+
+            $('.your-class').slick({
+                infinite: true,
+                slidesToScroll: 1,
+                variableWidth: true,
+                centerMode: true,
+                dots: true,
+                swipe: true
+
+            });
+
+            var timeoutId = 0;
+
+            $('.slide').on('mousedown', function() {
+
+
+
+                timeoutId = setTimeout(function(){
+                    alert("he");
+                }, 1000);
+            }).on('mouseup mouseleave', function() {
+                clearTimeout(timeoutId);
+            });
+
+
+
+            $(".footer-instructions").html("Use Arrow Keys or click to navigate slider");
+
+
+            
+
+        });
+
+    </script>
+
+  </body>
+</html>
